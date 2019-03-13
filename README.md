@@ -9,8 +9,10 @@ So. It is very sloppy.
 
 I used Alamofire and SwiftyJson.
 
-When you want sample code of "Alamofire and SwiftyJson", it can help you.
+When you want sample code of "Alamofire and SwiftyJson", it will help you.
 
-I am beginner level of developer, so i want feedback to you
+I am beginner level of developer.
+
+So, I want feedback to you.
 
 Thanks.
