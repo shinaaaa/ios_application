@@ -5,7 +5,9 @@
 
 It made my frist work in swift.
 
-So. It is very cheesy.
+I know it is not perfect.
+
+So, I want you to consider it.
 
 I used Alamofire and SwiftyJson.
 
