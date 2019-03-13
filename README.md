@@ -1,6 +1,6 @@
 # ios_application
 
-# Lif_Day.file
+# Life_Day.file
 
 It made my frist work in swift.
 
