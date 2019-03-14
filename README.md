@@ -12,8 +12,8 @@ If you want sample code of Alamofire and SwiftyJson, it will help you.
 
 But, It is written in Korean.
 
-![IMG_1154](https://user-images.githubusercontent.com/37543606/54328191-50e4a300-4650-11e9-8c1c-ef5a93c4f259.PNG){:height="24px" width="48px"}
-![IMG_1155](https://user-images.githubusercontent.com/37543606/54328203-60fc8280-4650-11e9-9b71-da67e77c028a.PNG){:height="24px" width="48px"}
+![IMG_1154](https://user-images.githubusercontent.com/37543606/54328191-50e4a300-4650-11e9-8c1c-ef5a93c4f259.PNG| width=48){:height="24px" width="48px"}
+![IMG_1155](https://user-images.githubusercontent.com/37543606/54328203-60fc8280-4650-11e9-9b71-da67e77c028a.PNG| width=48){:height="24px" width="48px"}
 
 Thank you for your visit.
 
