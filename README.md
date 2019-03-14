@@ -12,7 +12,12 @@ If you want sample code of Alamofire and SwiftyJson, it will help you.
 
 But, It is written in Korean.
 
+These pictures are screenshot in my iphone6S while running application.
 <img src="https://user-images.githubusercontent.com/37543606/54328191-50e4a300-4650-11e9-8c1c-ef5a93c4f259.PNG" width="40%"><img src="https://user-images.githubusercontent.com/37543606/54328203-60fc8280-4650-11e9-9b71-da67e77c028a.PNG" width="40%">
+
+Icon_sun changes according to the weather forecast.
+
+The weather forecast is received by the Korea Meteorological Administration.
 
 Thank you for your visit.
 
