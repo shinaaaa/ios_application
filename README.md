@@ -10,6 +10,8 @@ Please understand that this software is my first personal project that I’ve ev
 
 If you want sample code of Alamofire and SwiftyJson, it will help you.
 
+But, It is written in Korean.
+
 Thank you for your visit.
 
 I want your feedback.
