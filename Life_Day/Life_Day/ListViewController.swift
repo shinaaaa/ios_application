@@ -13,6 +13,7 @@ import UIKit
 import MapKit
 
 class ListViewController: UITableViewController, CLLocationManagerDelegate {
+    @IBOutlet var sky_image: UIImageView!
     
     // 테이블 뷰를 구성할 리스트 데이터
     lazy var list: [WeatherVO] = {
@@ -31,8 +32,6 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
         
-        // For use in foreground
-        
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
@@ -41,8 +40,6 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
             self.locationManager.distanceFilter = kCLDistanceFilterNone
             self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         }
-        
-        self.Weather_API()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
@@ -61,7 +58,7 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
             
             lat = convertGRID_GPS(lat_X: locValue.latitude, lng_Y: locValue.longitude).x
             lng = convertGRID_GPS(lat_X: locValue.latitude, lng_Y: locValue.longitude).y
-            
+        
             while count == 0 {
             self.Weather_API()
             count = 1
@@ -82,12 +79,8 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
         // dequeueReusableCell 메소드는 인자값을 입력받은 아이디를 이용하여 스토리보드에 정의된 프로토타입 셀을 찾고, 이를 인스턴스로 생성하여 우리에게 제공한다.
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! Weather_Cell
         // 테이블 뷰에 title이 있으면 출력 없으면 오류 없이 그냥 미출력
-        cell.baseDate?.text = row.baseDate
-        cell.baseTime?.text = row.baseTime
         cell.category?.text = row.category
         cell.obsrValue?.text = row.obsrValue
-        
-        cell.sky_image.image = row.sky_image
         
         // 테이블 뷰의 셀 인스턴스
         return cell
@@ -124,12 +117,12 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
     func Weather_API() {
         let serviceKey = "qPaKtPFXuD0yHTVcEz2ld9WDwKR0PVHmMesO%2FQl2MGGtnAh1IWV8qJMQkHZmn04J0xmRn%2B2YqB6tmaboC8pXow%3D%3D"
         
-        let url = "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastGrib?serviceKey=\(serviceKey)&base_date=\(currentDate())&base_time=\(currentTime())00&nx=63&ny=110&numOfRows=10&pageNo=1&_type=json"
+        let url = "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastGrib?serviceKey=\(serviceKey)&base_date=\(currentDate())&base_time=\(currentTime())00&nx=\(lat)&ny=\(lng)&numOfRows=10&pageNo=1&_type=json"
         
         DispatchQueue.main.async {
             Alamofire.request(url).responseJSON(completionHandler: {(response) in
                 switch response.result {
-                case . success(let value):
+                case . success:
                     if let data = response.data, let _ = String(data: data, encoding: .utf8) {
                         do {
                             print("\(response)")
@@ -139,44 +132,45 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
                             for (_, subJson) in json["response"]["body"]["items"]["item"] {
                                 print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                                 
-                                if let baseDate = subJson["baseDate"].int, let baseTime = subJson["baseTime"].int, let category = subJson["category"].string, let obsrValue = subJson["obsrValue"].double {
-                                    
-                                    print("baseDate = \(baseDate)")
-                                    print("baseTime = \(baseTime)")
-                                    print("category = \(category)")
-                                    print("obsrValue = \(obsrValue)")
+                                
+                                if
+                                    let category = subJson["category"].string {
                                     
                                     let wvo = WeatherVO()
                                     let unit: String?
                                     
-                                    
-                                    wvo.baseDate = "\(baseDate)"
-                                    wvo.baseTime = "\(baseTime)"
-                                    
-                                    if category == "SKY" {
+                                    if let obsrValue = subJson["obsrValue"].double {
+                                        print("obsrValue = \(obsrValue)")
+                                        if category == "PTY" {
+                                            
+                                            switch obsrValue {
+                                            case 0:
+                                                self.sky_image.image = UIImage(named: "ic_sunny.png")
+                                            case 1:
+                                                self.sky_image.image = UIImage(named: "ic_rain.png")
+                                            case 2:
+                                                self.sky_image.image = UIImage(named: "ic_rain.png")
+                                            case 3:
+                                                self.sky_image.image = UIImage(named: "ic_snow.png")
+                                            default: break
+                                            }
+                                            
+                                            unit = Weather_fcstValue_PTY(val: obsrValue)
+                                            wvo.obsrValue = unit!
+                                        } else {
+                                            unit = Weather_fcstValue_unit(val: category)
+                                            wvo.obsrValue = "\(obsrValue)" + unit!
+                                        }
+                                    } else if let obsrValue = subJson["obsrValue"].string {
+                                        print("obsrValue = \(obsrValue)")
                                         
-                                         switch obsrValue {
-                                         case 1:
-                                         wvo.sky_image = UIImage(named: "ic_sunny.png")
-                                         case 2:
-                                         wvo.sky_image = UIImage(named: "ic_cloudy.png")
-                                         case 3:
-                                         wvo.sky_image = UIImage(named: "ic_cloidy.png")
-                                         case 4:
-                                         wvo.sky_image = UIImage(named: "ic_foggy.png")
-                                         default: break
-                                         }
-                                        
-                                        unit = Weather_fcstValue_SKY(val: obsrValue)
-                                        wvo.obsrValue = unit!
-                                    } else if category == "PTY" {
-                                        unit = Weather_fcstValue_PTY(val: obsrValue)
-                                        wvo.obsrValue = unit!
-                                    } else {
-                                        unit = Weather_fcstValue_unit(val: category)
-                                        wvo.obsrValue = "\(obsrValue)" + unit!
+                                            unit = Weather_fcstValue_unit(val: category)
+                                            wvo.obsrValue = "\(obsrValue)" + unit!
+
                                     }
-                            
+                                    print("category = \(category)")
+                                    //print("obsrValue = \(obsrValue)")
+                                    
                                     wvo.category = "\(Weather_category_mean(val: category))"
                             
                                     // list 배열에 추가

@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class WeatherVO {
-    var baseDate: String?
-    var baseTime: String?
+
     var category: String?
     var obsrValue: String?
-    var sky_image: UIImage?
 }

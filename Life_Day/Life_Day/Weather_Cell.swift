@@ -10,10 +10,7 @@ import UIKit
 
 class Weather_Cell: UITableViewCell {
 
-    @IBOutlet var baseDate: UILabel!    // 발표일자
-    @IBOutlet var baseTime: UILabel!    // 발표시간
     @IBOutlet var category: UILabel!    // 자료구분코드
     @IBOutlet var obsrValue: UILabel!   //  예보 값
-    @IBOutlet var sky_image: UIImageView!
     
 }
