@@ -34,5 +34,3 @@ Thank you for your visit.
 I want your feedback.
 
 Thanks.
-
-<img src="https://user-images.githubusercontent.com/37543606/59662002-03477b80-91e7-11e9-9dcc-073b84013f03.png" width="40%"></img>
