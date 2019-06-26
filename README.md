@@ -15,7 +15,7 @@ But, It is written in Korean.
 These pictures are screenshot in my iphone6S while running application.
 
 <img src="https://user-images.githubusercontent.com/37543606/54328191-50e4a300-4650-11e9-8c1c-ef5a93c4f259.PNG" width="40%"><img src="https://user-images.githubusercontent.com/37543606/54328203-60fc8280-4650-11e9-9b71-da67e77c028a.PNG" width="40%">
-
+<img src="https://user-images.githubusercontent.com/37543606/60177802-d46b7e00-9854-11e9-8fa7-5ba91d695391.png" width="40%">
 
 The weather forecast is received by the Korea Meteorological Administration.
 
