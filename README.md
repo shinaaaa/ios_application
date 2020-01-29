@@ -2,7 +2,7 @@
 ios 어플리케이션 공부와 개발 프로젝트
 
 # 어플리케이션 목차
-[가벼운 메모장](https://github.com/shinaaaa/IOS_Memo_APP)
+[가벼운 메모장](#가벼운-메모장)
 
 # Life_Day
 
@@ -37,3 +37,5 @@ Thank you for your visit.
 I want your feedback.
 
 Thanks.
+
+# 가벼운 메모장
