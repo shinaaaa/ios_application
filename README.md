@@ -42,7 +42,6 @@ Thanks.
 
 # 가벼운 메모장
 [Github](https://github.com/shinaaaa/IOS_Memo_APP)
-# IOS 메모 어플리케이션
 
 어플리케이션 다운로드
 
