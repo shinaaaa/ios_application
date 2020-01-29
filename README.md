@@ -1,4 +1,5 @@
 # ios_application
+ios 어플리케이션 공부와 개발 프로젝트
 
 # Life_Day
 
