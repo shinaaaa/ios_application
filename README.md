@@ -1,6 +1,9 @@
 # ios_application
 ios 어플리케이션 공부와 개발 프로젝트
 
+# 어플리케이션 목차
+[가벼운 메모장](https://github.com/shinaaaa/IOS_Memo_APP)
+
 # Life_Day
 
 It used Weather api in swift with Alaomfire and SwiftyJson.
