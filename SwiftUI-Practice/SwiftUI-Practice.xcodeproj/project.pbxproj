@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E7454EE225FDD35A005FA5F8 /* VerticalLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */; };
 		E7454EE625FDD484005FA5F8 /* HorizontalLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */; };
+		E7454EEB25FDD7D6005FA5F8 /* ListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7454EEA25FDD7D6005FA5F8 /* ListVIew.swift */; };
+		E7454EEF25FDE91C005FA5F8 /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7454EEE25FDE91C005FA5F8 /* MainCardView.swift */; };
 		E787962625FDCFB100982E3A /* SwiftUI_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787962525FDCFB100982E3A /* SwiftUI_PracticeApp.swift */; };
 		E787962825FDCFB100982E3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787962725FDCFB100982E3A /* ContentView.swift */; };
 		E787962A25FDCFB200982E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787962925FDCFB200982E3A /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLayoutView.swift; sourceTree = "<group>"; };
 		E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLayoutView.swift; sourceTree = "<group>"; };
+		E7454EEA25FDD7D6005FA5F8 /* ListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVIew.swift; sourceTree = "<group>"; };
+		E7454EEE25FDE91C005FA5F8 /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
 		E787962225FDCFB100982E3A /* SwiftUI-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E787962525FDCFB100982E3A /* SwiftUI_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PracticeApp.swift; sourceTree = "<group>"; };
 		E787962725FDCFB100982E3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7454EE825FDD754005FA5F8 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */,
+				E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		E7454EE925FDD766005FA5F8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E7454EEA25FDD7D6005FA5F8 /* ListVIew.swift */,
+				E7454EEE25FDE91C005FA5F8 /* MainCardView.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
 		E787961925FDCFB100982E3A = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +78,13 @@
 		E787962425FDCFB100982E3A /* SwiftUI-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				E7454EE925FDD766005FA5F8 /* List */,
 				E787962525FDCFB100982E3A /* SwiftUI_PracticeApp.swift */,
 				E787962725FDCFB100982E3A /* ContentView.swift */,
 				E787962925FDCFB200982E3A /* Assets.xcassets */,
 				E787962E25FDCFB200982E3A /* Info.plist */,
 				E787962B25FDCFB200982E3A /* Preview Content */,
-				E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */,
-				E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */,
+				E7454EE825FDD754005FA5F8 /* Layout */,
 			);
 			path = "SwiftUI-Practice";
 			sourceTree = "<group>";
@@ -145,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7454EE625FDD484005FA5F8 /* HorizontalLayoutView.swift in Sources */,
+				E7454EEF25FDE91C005FA5F8 /* MainCardView.swift in Sources */,
 				E787962825FDCFB100982E3A /* ContentView.swift in Sources */,
+				E7454EEB25FDD7D6005FA5F8 /* ListVIew.swift in Sources */,
 				E787962625FDCFB100982E3A /* SwiftUI_PracticeApp.swift in Sources */,
 				E7454EE225FDD35A005FA5F8 /* VerticalLayoutView.swift in Sources */,
 			);
