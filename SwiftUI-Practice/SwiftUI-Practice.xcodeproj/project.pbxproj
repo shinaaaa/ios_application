@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7454EE225FDD35A005FA5F8 /* VerticalLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */; };
+		E7454EE625FDD484005FA5F8 /* HorizontalLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */; };
 		E787962625FDCFB100982E3A /* SwiftUI_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787962525FDCFB100982E3A /* SwiftUI_PracticeApp.swift */; };
 		E787962825FDCFB100982E3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787962725FDCFB100982E3A /* ContentView.swift */; };
 		E787962A25FDCFB200982E3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787962925FDCFB200982E3A /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLayoutView.swift; sourceTree = "<group>"; };
+		E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLayoutView.swift; sourceTree = "<group>"; };
 		E787962225FDCFB100982E3A /* SwiftUI-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E787962525FDCFB100982E3A /* SwiftUI_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PracticeApp.swift; sourceTree = "<group>"; };
 		E787962725FDCFB100982E3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				E787962925FDCFB200982E3A /* Assets.xcassets */,
 				E787962E25FDCFB200982E3A /* Info.plist */,
 				E787962B25FDCFB200982E3A /* Preview Content */,
+				E7454EE125FDD35A005FA5F8 /* VerticalLayoutView.swift */,
+				E7454EE525FDD484005FA5F8 /* HorizontalLayoutView.swift */,
 			);
 			path = "SwiftUI-Practice";
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7454EE625FDD484005FA5F8 /* HorizontalLayoutView.swift in Sources */,
 				E787962825FDCFB100982E3A /* ContentView.swift in Sources */,
 				E787962625FDCFB100982E3A /* SwiftUI_PracticeApp.swift in Sources */,
+				E7454EE225FDD35A005FA5F8 /* VerticalLayoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
