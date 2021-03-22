@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainCardView : View {
+    @State var shouldShowAlert : Bool = false
+    
     var body: some View {
         
         /**
@@ -61,15 +63,20 @@ struct MainCardView : View {
                 
                 Spacer()
                 
-                Text("확인")
+                Button(action: {
+                    self.shouldShowAlert = true
+                }, label: {Text("확인")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .padding(20)
                     .frame(width: 80)
                     .background(Color.blue)
                     .cornerRadius(20)
+                }).alert(isPresented: $shouldShowAlert) {
+                    Alert(title: Text("알림창입니다!"))
+                }
             }
-
+            
         }
         .padding(30)    // background보다 먼저 작성해야함
         .background(Color.yellow)   // 배경색
